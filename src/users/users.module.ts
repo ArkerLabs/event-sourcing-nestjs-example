@@ -9,10 +9,12 @@ import { EventSourcingModule } from 'event-sourcing-nestjs';
 import { RediskModule } from 'redisk-nestjs';
 import { config } from 'src/config';
 import { UserResolver } from './graphql/user.resolver';
+import { CommonModule } from 'src/common/common.module';
 
 @Module({
     imports: [
         CqrsModule,
+        CommonModule,
         RediskModule.forRoot({ url: config.REDIS_URL }),
         EventSourcingModule.forRoot({ mongoURL: config.MONGO_URL }),
     ],
