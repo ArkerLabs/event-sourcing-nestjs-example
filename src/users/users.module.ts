@@ -16,7 +16,7 @@ import { CommonModule } from 'src/common/common.module';
         CqrsModule,
         CommonModule,
         RediskModule.forRoot({ url: config.REDIS_URL }),
-        EventSourcingModule.forRoot({ mongoURL: config.MONGO_URL }),
+        EventSourcingModule.forFeature(),
     ],
     controllers: [UsersController],
     providers: [

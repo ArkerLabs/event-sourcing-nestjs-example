@@ -28,7 +28,7 @@
     "@nestjs/platform-express": "^6.7.2",
     "apollo-server-express": "^2.9.16",
     "dotenv": "^8.2.0",
-    "event-sourcing-nestjs": "^1.0.2",
+    "event-sourcing-nestjs": "^1.0.3",
     "graphql": "^14.5.8",
     "graphql-tools": "^4.0.6",
     "nanoid": "^2.1.9",
@@ -58,7 +58,10 @@
     "typescript": "^3.6.3"
   },
   "jest": {
-    "moduleDirectories": ["node_modules", "src"],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
     "moduleFileExtensions": [
       "js",
       "json",
