@@ -2,8 +2,9 @@ import { Module, DynamicModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { UsersModule } from './users/users.module';
 import { GraphQLModule } from '@nestjs/graphql';
-import { config } from './config';
 import { EventSourcingModule } from 'event-sourcing-nestjs';
+import { RediskModule } from 'redisk-nestjs';
+import { config } from 'src/config';
 
 @Module({})
 export class AppModule {
@@ -12,6 +13,7 @@ export class AppModule {
             module: this,
             imports: [
                 UsersModule,
+                RediskModule.forRoot({ url: config.REDIS_URL }),
                 EventSourcingModule.forRoot({ mongoURL: config.MONGO_URL }),
                 GraphQLModule.forRoot({
                     debug: config.NODE_ENV === 'development',

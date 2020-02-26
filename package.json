@@ -33,7 +33,7 @@
     "graphql-tools": "^4.0.6",
     "nanoid": "^2.1.9",
     "redisk": "^1.1.2",
-    "redisk-nestjs": "^1.0.2",
+    "redisk-nestjs": "^1.0.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.3"

@@ -6,8 +6,6 @@ import { QueryHandlers } from './queries/handlers';
 import { UsersController } from './users.controller';
 import { StateUpdaters } from './events/updaters';
 import { EventSourcingModule } from 'event-sourcing-nestjs';
-import { RediskModule } from 'redisk-nestjs';
-import { config } from 'src/config';
 import { UserResolver } from './graphql/user.resolver';
 import { CommonModule } from 'src/common/common.module';
 
@@ -15,7 +13,6 @@ import { CommonModule } from 'src/common/common.module';
     imports: [
         CqrsModule,
         CommonModule,
-        RediskModule.forRoot({ url: config.REDIS_URL }),
         EventSourcingModule.forFeature(),
     ],
     controllers: [UsersController],
