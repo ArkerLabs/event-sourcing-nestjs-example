@@ -1,10 +1,11 @@
 import { Module, DynamicModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { UsersModule } from './users/users.module';
-import { GraphQLModule } from '@nestjs/graphql';
+import { AuthModule } from './auth/auth.module';
 import { EventSourcingModule } from 'event-sourcing-nestjs';
 import { RediskModule } from 'redisk-nestjs';
 import { config } from 'src/config';
+import { GraphModule } from './graphql/graph.module';
 
 @Module({})
 export class AppModule {
@@ -13,13 +14,10 @@ export class AppModule {
             module: this,
             imports: [
                 UsersModule,
+                AuthModule,
                 RediskModule.forRoot({ url: config.REDIS_URL }),
                 EventSourcingModule.forRoot({ mongoURL: config.MONGO_URL }),
-                GraphQLModule.forRoot({
-                    debug: config.NODE_ENV === 'development',
-                    playground: config.NODE_ENV === 'development',
-                    typePaths: ['./**/*.graphql'],
-                }),
+                GraphModule,
             ],
             controllers: [AppController],
         };

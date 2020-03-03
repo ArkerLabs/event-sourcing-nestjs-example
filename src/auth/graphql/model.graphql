@@ -1,0 +1,14 @@
+type AuthToken {
+    expires_in: Int!
+    access_token: String!
+}
+
+type Query {
+  me: String!
+}
+
+type Mutation {
+  login(
+    email: String!
+  ): AuthToken
+}

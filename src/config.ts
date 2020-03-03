@@ -7,5 +7,6 @@ const configFromProcess = {
     STRIPE_APIKEY: process.env.STRIPE_APIKEY,
     STRIPE_SECRETKEY: process.env.STRIPE_SECRETKEY,
     NODE_ENV: process.env.NODE_ENV,
+    JWT_SECRET: process.env.JWT_SECRET,
 };
 export const config = {...configFromProcess, ...dotenv.config().parsed};
