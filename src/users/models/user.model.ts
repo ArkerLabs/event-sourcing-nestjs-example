@@ -3,7 +3,7 @@ import { Primary } from 'redisk';
 import { Property } from 'redisk';
 import { Unique } from 'redisk';
 
-@Entity('user', { canBeListed: true })
+@Entity('user')
 export class User {
 
   @Primary()
@@ -11,11 +11,11 @@ export class User {
   public readonly id: string;
 
   @Property({sortable: false, searchable: true})
-  public readonly name: string;
+  public name: string;
 
   @Unique()
   @Property()
-  public readonly email: string;
+  public email: string;
 
   @Property({sortable: true, searchable: false})
   public readonly created: Date;

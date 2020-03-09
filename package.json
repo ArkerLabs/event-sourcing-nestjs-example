@@ -36,8 +36,8 @@
     "nanoid": "^2.1.9",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "redisk": "^1.1.2",
-    "redisk-nestjs": "^1.0.3",
+    "redisk": "^1.2.0",
+    "redisk-nestjs": "^1.0.4",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.3"
