@@ -1,7 +1,7 @@
 import { mock, instance, when } from 'ts-mockito';
 import { Redisk } from 'redisk';
 import { GetUserByIdQuery } from '../impl';
-import { User } from 'src/users/models/user.model';
+import { User } from 'src/users/entities/user.entity';
 import { GetUserByIdHandler } from './get-user-by-id.handler';
 
 describe('GetUserByIdHandler', () => {

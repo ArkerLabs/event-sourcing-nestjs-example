@@ -1,7 +1,7 @@
 import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';
 import { GetUserByIdQuery, GetUserByEmailQuery } from '../impl';
 import { Redisk } from 'redisk';
-import { User } from 'src/users/models/user.model';
+import { User } from 'src/users/entities/user.entity';
 
 @QueryHandler(GetUserByEmailQuery)
 export class GetUserByEmailHandler implements IQueryHandler<GetUserByEmailQuery> {

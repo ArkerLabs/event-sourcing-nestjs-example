@@ -2,7 +2,7 @@ import { mock, instance, when } from 'ts-mockito';
 import { Redisk } from 'redisk';
 import { GetUserByEmailHandler } from './get-user-by-email.handler';
 import { GetUserByEmailQuery } from '../impl';
-import { User } from 'src/users/models/user.model';
+import { User } from 'src/users/entities/user.entity';
 
 describe('GetUserByEmailHandler', () => {
     it('should query redis', async () => {

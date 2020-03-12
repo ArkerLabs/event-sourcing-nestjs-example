@@ -10,14 +10,14 @@ export class User {
   @Property()
   public readonly id: string;
 
-  @Property({sortable: false, searchable: true})
+  @Property({searchable: true})
   public name: string;
 
   @Unique()
   @Property()
   public email: string;
 
-  @Property({sortable: true, searchable: false})
+  @Property({indexed: true})
   public readonly created: Date;
 
   constructor(

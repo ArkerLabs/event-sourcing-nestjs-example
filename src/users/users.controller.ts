@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { CommandBus, QueryBus } from '@nestjs/cqrs';
 import { GetUserByIdQuery, GetUserByEmailQuery, GetUsersQuery } from './queries/impl';
-import { User } from './models/user.model';
+import { User } from './entities/user.entity';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { CreateUserCommand } from './commands/impl/create-user.command';
 

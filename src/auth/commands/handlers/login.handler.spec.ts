@@ -3,7 +3,7 @@ import { LoginCommand } from '../impl/login.command';
 import { Redisk } from 'redisk';
 import { mock, instance, when, deepEqual } from 'ts-mockito';
 import { AuthService } from 'src/graphql/services/auth.service';
-import { User } from 'src/users/models/user.model';
+import { User } from 'src/users/entities/user.entity';
 import { AuthPayload } from 'src/graphql/services/auth.payload';
 import { ForbiddenException } from '@nestjs/common';
 

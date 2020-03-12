@@ -2,7 +2,7 @@ import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { LoginCommand } from '../impl/login.command';
 import { AuthService } from 'src/graphql/services/auth.service';
 import { Redisk } from 'redisk';
-import { User } from 'src/users/models/user.model';
+import { User } from 'src/users/entities/user.entity';
 import { AuthPayload } from 'src/graphql/services/auth.payload';
 import { ForbiddenException } from '@nestjs/common';
 
