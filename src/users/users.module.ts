@@ -6,7 +6,6 @@ import { QueryHandlers } from './queries/handlers';
 import { UsersController } from './users.controller';
 import { StateUpdaters } from './events/updaters';
 import { EventSourcingModule } from 'event-sourcing-nestjs';
-import { UserResolver } from './graphql/user.resolver';
 import { CommonModule } from 'src/common/common.module';
 
 @Module({
@@ -21,7 +20,6 @@ import { CommonModule } from 'src/common/common.module';
         ...EventHandlers,
         ...QueryHandlers,
         ...StateUpdaters,
-        UserResolver,
     ],
 })
 export class UsersModule {}

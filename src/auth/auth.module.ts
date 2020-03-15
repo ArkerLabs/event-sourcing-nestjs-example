@@ -2,22 +2,20 @@ import { Module } from '@nestjs/common';
 import { CqrsModule } from '@nestjs/cqrs';
 import { CommandHandlers } from './commands/handlers';
 import { EventSourcingModule } from 'event-sourcing-nestjs';
-import { AuthResolver } from './graphql/auth.resolver';
 import { CommonModule } from 'src/common/common.module';
 import { AuthController } from './auth.controller';
-import { GraphModule } from 'src/graphql/graph.module';
+import { AuthService } from './services/auth.service';
 
 @Module({
     imports: [
         CqrsModule,
         CommonModule,
-        GraphModule,
         EventSourcingModule.forFeature(),
     ],
     controllers: [AuthController],
     providers: [
         ...CommandHandlers,
-        AuthResolver,
+        AuthService,
     ],
 })
 export class AuthModule {}

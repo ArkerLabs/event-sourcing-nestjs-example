@@ -1,11 +1,9 @@
 import { Body, Controller, Get, Param, Post, UseGuards, Req } from '@nestjs/common';
 import { CommandBus } from '@nestjs/cqrs';
-import { GqlAuthGuard } from 'src/graphql/guards/gql-auth.guard';
-import { AuthService } from 'src/graphql/services/auth.service';
+import { AuthService } from 'src/auth/services/auth.service';
 import { LoginCommand } from './commands/impl/login.command';
 import { LoginDto } from './dtos/login.dto';
-import { AuthGuard } from '@nestjs/passport';
-import { RestAuthGuard } from 'src/graphql/guards/rest-auth.guard';
+import { RestAuthGuard } from 'src/auth/guards/rest-auth.guard';
 
 @Controller('auth')
 export class AuthController {
