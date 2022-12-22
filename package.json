@@ -28,7 +28,7 @@
     "@nestjs/platform-express": "^6.7.2",
     "dotenv": "^8.2.0",
     "event-sourcing-nestjs": "^1.0.3",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "nanoid": "^2.1.9",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
